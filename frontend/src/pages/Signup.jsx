@@ -35,7 +35,7 @@ const Signup = () => {
 
             if (authError) throw authError;
 
-            // ✅ Step 2: Insert user details into Supabase `UserTable`
+            // ✅ Step 2: Insert user details into Supabase UserTable
             const { error: userError } = await supabase
                 .from("UserTable")
                 .insert([{ firstname: firstName, lastname: lastName, phoneno: phoneNo, email }]);
